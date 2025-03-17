@@ -1,7 +1,7 @@
 import streamlit as st
 import time
 import os
-from SC.pg2 import (
+from pg2 import (
     search_database, process_query_with_openai
 )
 

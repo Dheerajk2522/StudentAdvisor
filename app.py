@@ -242,7 +242,7 @@ if submit_button and user_input:
     add_message("bot", bot_response)
     
     # Force a rerun to update the UI with the new messages
-    st.experimental_rerun()
+    st.rerun()
 
 # Add a footer
 st.markdown("---")

@@ -9,3 +9,5 @@ numpy
 pandas
 openpyxl
 torch
+torchvision
+torchaudio

@@ -17,7 +17,7 @@ import streamlit as st
 DB_NAME = "studentAdv2"
 DB_USER = "postgres"
 DB_PASSWORD = "1234"
-DB_HOST = "localhost"
+DB_HOST = "192.168.25.232"
 DB_PORT = "5432"
 engine = create_engine(f'postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}')
 

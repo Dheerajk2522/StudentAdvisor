@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 import os
+import asyncio
 from pg2 import (
     search_database, process_query_with_openai
 )
@@ -163,13 +164,6 @@ with st.expander("ℹ️ About this app", expanded=False):
     - Prerequisites and study plans
     - Course scheduling and availability
     - Program requirements and specializations
-    
-    **Example questions:**
-    - Which courses should John Smith take next semester?
-    - What are the prerequisites for CS101?
-    - How can a student specialize in Data Science?
-    - What is Emma Johnson's current GPA?
-    - Show me the class schedule for COMP380.
     """)
 
 # Display chat history
@@ -242,7 +236,8 @@ if submit_button and user_input:
     add_message("bot", bot_response)
     
     # Force a rerun to update the UI with the new messages
-    st.rerun()
+    # st.rerun()
+    asyncio.run(st.run())
 
 # Add a footer
 st.markdown("---")

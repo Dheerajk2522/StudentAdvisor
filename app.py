@@ -1,7 +1,6 @@
 import streamlit as st
 import time
 import os
-import asyncio
 from pg2 import (
     search_database, process_query_with_openai
 )
@@ -236,8 +235,7 @@ if submit_button and user_input:
     add_message("bot", bot_response)
     
     # Force a rerun to update the UI with the new messages
-    # st.rerun()
-    asyncio.run(st.run())
+    st.rerun()
 
 # Add a footer
 st.markdown("---")
